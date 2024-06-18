@@ -1,0 +1,13 @@
+# Ignore everything
+/*
+
+# Except the lib directory
+!/lib/
+!/lib/**
+
+# Allow the .gitignore file itself
+!.gitignore
+
+# Allow the README file (optional)
+!README.md
+
