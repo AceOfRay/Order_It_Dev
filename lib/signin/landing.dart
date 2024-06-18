@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:order_it_dev/signin/login.dart';
 
 class LandingPage extends StatefulWidget {
+  const LandingPage({super.key});
+
   @override
   _LandingPageState createState() => _LandingPageState();
 }
@@ -13,19 +15,17 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        // To handle keyboard overflow
+        
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             
             const SizedBox(height: 20),
-
-            // Form Fields (Conditional based on isLogin)
+            const Icon(Icons.fire_truck),
             LoginWidget(isLoggingIn: isLogin),
 
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
 
-            // Toggle between Login and Signup
             TextButton(
               onPressed: () {
                 setState(() {

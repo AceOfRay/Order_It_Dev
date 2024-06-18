@@ -60,12 +60,14 @@ class LoginWidgetState extends State<LoginWidget> {
 
             CustomSubmitButton(
               buttonText: widget.isLoggingIn ? "Login" : "Sign Up", 
-              onPressed: () => {
+              onPressed: () async => {
                 if (widget.isLoggingIn) {
-                  FirebaseTools.Authenticate(chefEmailController.text, passwordController.text)
+                  await FirebaseTools.authenticate(chefEmailController.text, passwordController.text)
+                  UserCredential
+
                   // forward
                 } else {
-                  FirebaseTools.CreateUser(chefNameController.text, chefEmailController.text, passwordController.text)
+                  await FirebaseTools.createUser(chefNameController.text, chefEmailController.text, passwordController.text)
                   // forward
                 }
               }),

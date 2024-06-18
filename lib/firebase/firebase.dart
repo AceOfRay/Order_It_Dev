@@ -1,10 +1,10 @@
 class FirebaseTools {
 
-  static bool Authenticate(String email, String password) {
-    return false;
+  static Future authenticate(String email, String password) async {
+    return true;
   }
 
-  static bool CreateUser(String chefName, String email, String password) {
-    return false;
+  static Future createUser(String chefName, String email, String password) async {
+    return true;
   }
 }

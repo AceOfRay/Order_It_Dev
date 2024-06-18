@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:order_it_dev/signin/landing.dart';
+//import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-  runApp(const MainApp());
+void main() async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
+  runApp(const OrderIt());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class OrderIt extends StatelessWidget {
+  const OrderIt({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+        body: LandingPage(),
       ),
     );
   }

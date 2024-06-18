@@ -5,10 +5,10 @@ class CustomSubmitButton extends StatelessWidget {
   final VoidCallback onPressed;
 
   const CustomSubmitButton({
-    Key? key,
+    super.key,
     required this.buttonText,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
