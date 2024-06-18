@@ -63,7 +63,6 @@ class LoginWidgetState extends State<LoginWidget> {
               onPressed: () async => {
                 if (widget.isLoggingIn) {
                   await FirebaseTools.authenticate(chefEmailController.text, passwordController.text)
-                  UserCredential
 
                   // forward
                 } else {
