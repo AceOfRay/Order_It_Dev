@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:order_it_dev/components/submitButton.dart';
 import 'package:order_it_dev/components/textField.dart';
 import 'package:order_it_dev/firebase/firebase.dart';
+import 'package:order_it_dev/pages/home.dart';
+import 'package:order_it_dev/pages/landing.dart';
 
 class LoginWidget extends StatefulWidget {
   final bool isLoggingIn;
@@ -62,11 +64,18 @@ class LoginWidgetState extends State<LoginWidget> {
               buttonText: widget.isLoggingIn ? "Login" : "Sign Up", 
               onPressed: () async => {
                 if (widget.isLoggingIn) {
-                  await FirebaseTools.authenticate(chefEmailController.text, passwordController.text)
+                  if (await FirebaseTools.authenticate(chefEmailController.text, passwordController.text)) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => /*home*/HomePage())
+                    )
+                  }
 
                   // forward
                 } else {
-                  await FirebaseTools.createUser(chefNameController.text, chefEmailController.text, passwordController.text)
+                  if (await FirebaseTools.createUser(chefNameController.text, chefEmailController.text, passwordController.text)) {
+
+                  }
                   // forward
                 }
               }),
