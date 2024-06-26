@@ -67,7 +67,7 @@ class LoginWidgetState extends State<LoginWidget> {
                   if (await FirebaseTools.authenticate(chefEmailController.text, passwordController.text)) {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => /*home*/HomePage())
+                      MaterialPageRoute(builder: (context) => HomePage())
                     )
                   }
 
