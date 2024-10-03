@@ -15,7 +15,6 @@ class GetCookingSection extends StatelessWidget {
             SectionTitle(title: "Get Cooking", padding: 8.0),
             Row(
               children: [
-                
                 ForwardingWidget(
                   text: "Recipe",
                   destination:
